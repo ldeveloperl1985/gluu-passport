@@ -12,7 +12,7 @@ const
 	confDiscovery = require('./utils/configDiscovery'),
 	routes = require('./routes'),
 	providers = require('./providers'),
-	passportFile = '/etc/gluu/conf/passport-config.json'
+	passportFile = process.env.passport_file || '/etc/gluu/conf/passport-config.json'
 
 var httpServer, httpPort = -1
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
@@ -113,3 +113,4 @@ function init() {
 }
 
 init()
+module.exports = server;

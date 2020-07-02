@@ -3,7 +3,8 @@
     "version": "4.1.0",
     "private": true,
     "scripts": {
-        "start": "node app"
+        "start": "node app",
+        "test": "mocha --require server/test/bootstrap.js server/test/*.test.js"
     },
     "dependencies": {
         "@sokratis/passport-linkedin-oauth2": "^2.1.0",
@@ -40,5 +41,9 @@
         "winston-daily-rotate-file": "^3.6.0",
         "www-authenticate": "^0.6.2",
         "xpath": "^0.0.24"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "mocha": "^8.0.1"
     }
 }
