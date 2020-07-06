@@ -61,7 +61,7 @@ function getTokenEndpoint(umaConfigURL) {
 function getRPT(ticket, token_endpoint) {
 
 	logger.log2('verbose', 'getRPT called')
-	let
+	const
 		clientId = global.basicConfig.clientId,
     	now = new Date().getTime(),
 		token = misc.getRpJWT({
